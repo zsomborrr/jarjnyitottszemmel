@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+  color: #e2e2e2;
+}
+
+a:visited {
+  color: #e2e2e2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: transparent;
+  color: #e2e2e2;
+}
+
+.sect-header {
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  position: relative;
+  font-family: "Orbitron", sans-serif;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #00ff9c;
+  text-shadow: 0 0 15px #00ff9c;
+}
+
+.sect-content {
+  padding: 60px 10%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+.theory-card {
+  background: #111111;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 156, 0.1);
+  transition: 0.3s;
+}
+
+.theory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.3);
+  cursor: pointer;
+}
+
+.theory-card h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #00ff9c;
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #050505;
+  color: #555555;
+  font-size: 0.9rem;
+  border-top: 1px solid #111111;
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.scramble-text {
+  font-family: "Orbitron", "SF Mono", Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  white-space: pre-wrap;
+}
+
+header h1::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 6px;
+  background: #108558;
+  vertical-align: bottom;
+  animation: typewriter-caret-blink 1s steps(1, end) infinite;
+}
+
+@keyframes typewriter-caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  scale: 0.8;
+  transition: scale 0.2s ease-out;
+}
+
+.content img:hover {
+  scale: 0.9;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .sect-content {
+    padding: 40px 6%;
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .theory-card {
+    padding: 22px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sect-header {
+    height: 40vh;
+    padding: 0 16px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .sect-content {
+    padding: 30px 16px;
+  }
+
+  .theory-card {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+
+  .theory-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .theory-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  footer {
+    padding: 18px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .sect-header {
+    height: 35vh;
+  }
+
+  .sect-content {
+    padding: 24px 12px;
+  }
+
+  .theory-card {
+    padding: 16px;
+  }
+
+  .content img {
+    scale: 0.9;
+  }
+}
